@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"> 
+<html lang="en"> 
+<head> 
+<style>
+option{
+	font-size: 30px;
+	margin-left: 20px;
+}
+#ids {
+	margin: 10px;
+	margin-left:20px;
+	font-size: 20 px;
+}
+p{
+  font-size: 20px;
+}
+
+
+</style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>Cloud Assignment1</title> 
+         <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Cloud Assignment 1</a>
+    </div>
+    </nav>
+
+
+<p id="ids">Please Select one of the keywords</p>
+<form action="." method="post">{% csrf_token %}
+<select id="ids" name="key_word"> 
+        <option value="Trump">Trump</option> 
+        <option  value="Oscars">Oscars</option> 
+        <option value="Immigrants">Immigrants</option> 
+        <option value="Holi">Holi</option> 
+        <option value="election">Election</option>
+        <option value="Apple">Apple</option>
+        <option value="IBM">IBM</option>
+        <option value="PokemonGo">PokemonGo</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Usa">Usa</option>
+
+
+</select> 
+<br >
+<input style="margin: 30px ; margin-left:40px; font-size: 20px; font-color : #00FF00" class="btn btn-info" type="submit" value="Submit" /> 
+</p>
+</form>
+</p> 
+</body> 
+</html> 

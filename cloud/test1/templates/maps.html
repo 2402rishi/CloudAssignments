@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Clustering</title>
+<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body>
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.0902, lng: 95.7129};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        var tweets= {{lats | safe}};
+        for(i=0; i<tweets.length; i++){
+          var items=tweets[i];
+          var latlng= new google.maps.LatLng(items['lat'],items['lng']);
+          var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+        }
+        map.setZoom(2);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD997GCi_Qm55Zi-tLd6W31sFNKU-cA6JY&callback=initMap">
+    </script>
+
+</body>
+</html>
+
