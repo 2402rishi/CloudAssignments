@@ -24,7 +24,7 @@ i=1
 client = boto3.client('sqs')
 response = client.get_queue_url(
     QueueName='RV',
-    QueueOwnerAWSAccountId='747207699252'
+    QueueOwnerAWSAccountId=''
 )
 def starter(numbers):
 	while (True):
